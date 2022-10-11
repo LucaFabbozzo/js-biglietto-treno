@@ -16,6 +16,7 @@ const scontoOver = prezzoViaggio * over;
 
 let prezzoFinale;
 
+
 if (etaPasseggero < 18) {
  prezzoFinale = prezzoViaggio - scontoMinori;
 } else if (etaPasseggero > 65) {
@@ -25,5 +26,7 @@ if (etaPasseggero < 18) {
 
 
 document.getElementById('prezzo').innerHTML = `
-  Il prezzo del tuo viaggio è : ${prezzoFinale} 
+  Il prezzo del tuo viaggio :  ${Math.round(prezzoFinale * 100) / 100} €
 `;
+
+
